@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <header class="header-bar">
+        <h1>Backend-программист</h1>
+    </header>
+    <main>
+        <nav class="sidebar">
+            <ul>
+                <li class="var_nav">
+                    <div class="link_bg"></div>
+                    <div class="link_title">
+                        <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
+                        <a href=".."><span>Главная</span></a></div>
+                </li>
+                <li class="var_nav active">
+                    <div class="link_bg"></div>
+                    <div class="link_title">
+                        <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
+                        <a href=""><span>Востребованность</span></a></div>
+                </li>
+                <li class="var_nav">
+                    <div class="link_bg"></div>
+                    <div class="link_title">
+                        <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
+                        <a href="../geography"><span>География</span></a></div>
+                </li>
+                <li class="var_nav">
+                    <div class="link_bg"></div>
+                    <div class="link_title">
+                        <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
+                        <a href="../skills"><span>Навыки</span></a></div>
+                </li>
+                <li class="var_nav">
+                    <div class="link_bg"></div>
+                    <div class="link_title">
+                        <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
+                        <a href="../lastvacancies"><span>Последние вакансии</span></a></div>
+                </li>
+            </ul>
+        </nav>
+    </main>
+    <footer>
+        <p>Мельников Александр Валерьевич РИ-210944</p>
+    </footer>
+</body>
+</html>
