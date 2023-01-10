@@ -19,7 +19,8 @@ from app.views import index, demand, geography, skills, lastvacancies
 from django.conf.urls import include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
+    path('admin/', admin.site.urls),  # admin site
     path('', index),
     path('demand/', demand),
     path('geography/', geography),

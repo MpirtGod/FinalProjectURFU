@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from app.models import Profession
+from app.models import Profession_statistic
 
 
 # Create your views here.
 def index(request):
-    data = {'professions' : Profession.objects.get(id=1)}
     return render(request, 'index.html')
 
 def demand(request):
