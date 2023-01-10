@@ -11,41 +11,54 @@
     <header class="header-bar">
         <h1>Backend-программист</h1>
     </header>
+    <nav class="sidebar">
+        <ul>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
+                    <a href=".."><span>Главная</span></a></div>
+            </li>
+            <li class="var_nav active">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
+                    <a href=""><span>Востребованность</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
+                    <a href="../geography"><span>География</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
+                    <a href="../skills"><span>Навыки</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
+                    <a href="../lastvacancies"><span>Последние вакансии</span></a></div>
+            </li>
+        </ul>
+    </nav>
     <main>
-        <nav class="sidebar">
-            <ul>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
-                        <a href=".."><span>Главная</span></a></div>
-                </li>
-                <li class="var_nav active">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
-                        <a href=""><span>Востребованность</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
-                        <a href="../geography"><span>География</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
-                        <a href="../skills"><span>Навыки</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
-                        <a href="../lastvacancies"><span>Последние вакансии</span></a></div>
-                </li>
-            </ul>
-        </nav>
+        <h2>Востребованность</h2>
+        <table>
+            <thread><th class="year">Год</th><th>Средняя зарплата</th><th>Средняя зарплата - Backend-программист</th><th>Количество вакансий</th><th>Количество вакансий - Backend-программист</th></thread>
+        {% for profession in query_results %}
+            <tr>
+                <td class="year">{{ profession.year }}</td>
+                <td>{{ profession.mean_salary }}</td>
+                <td>{{ profession.profession_mean_salary }}</td>
+                <td>{{ profession.vacancy_count }}</td>
+                <td>{{ profession.profession_vacancy_count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
     </main>
     <footer>
         <p>Мельников Александр Валерьевич РИ-210944</p>
