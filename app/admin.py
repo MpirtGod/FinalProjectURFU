@@ -1,6 +1,6 @@
 from django.contrib import admin
 from app.models import Profession_statistic
-from app.models import SalaryByCity, PercentageByCity
+from app.models import SalaryByCity, PercentageByCity, SkillsByYear
 
 from import_export.admin import ImportExportActionModelAdmin
 from import_export import resources, fields
@@ -39,3 +39,14 @@ class PercentageByCityAdmin(ImportExportActionModelAdmin):
     list_display = [field.name for field in PercentageByCity._meta.fields if field.name != 'id']
 
 admin.site.register(PercentageByCity, PercentageByCityAdmin)
+
+
+class SkillsByYearResource(resources.ModelResource):
+    class Meta:
+        model = SkillsByYear
+
+class SkillsByYearAdmin(ImportExportActionModelAdmin):
+    resource_class = SkillsByYearResource
+    list_display = [field.name for field in SkillsByYear._meta.fields if field.name != 'id']
+
+admin.site.register(SkillsByYear, SkillsByYearAdmin)

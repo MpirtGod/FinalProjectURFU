@@ -164,8 +164,8 @@ main {
     top: 80px;
     left: 300px;
     right: 0;
-    padding-bottom: 200px;
-    height: 90%;
+    /*padding-bottom: 200px;*/
+    height: 115%;
     overflow: hidden;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.39);
@@ -201,6 +201,7 @@ table {
     border-collapse: collapse;
     border-top: 7px solid #207a66;
     border-bottom: 7px solid #207a66;
+    top: 40px;
 }
 
 th {
@@ -210,7 +211,7 @@ th {
     border-right: 1px solid #207a66;
     border-left: 1px solid #207a66;
     border-bottom: 3px solid #207a66;
-    color: #3f52da;
+    color: #090f69;
     padding: 8px;
 }
 
@@ -228,4 +229,40 @@ tr:hover td{
 
 .year {
     background: #208270;
+}
+
+.statistic_salary {
+    position: fixed;
+    right: 5%;
+    top: 13%;
+    background: white;
+    width: 22%;
+    height: auto;
+}
+
+.lefttable {
+    left: 100px;
+    width: 300px;
+    height: 500px;
+}
+
+.righttable {
+    left: 570px;
+    width: 300px;
+    height: 500px;
+}
+
+.geography_main {
+    height: 90%;
+}
+
+caption {
+    color: white;
+    font-size: 30px;
+}
+
+.skills_table {
+    left: 280px;
+    height: 500px;
+    width: 1000px;
 }

@@ -39,3 +39,14 @@ class PercentageByCity(models.Model):
     class Meta:
         verbose_name = 'Процент вакансий по городам'
         verbose_name_plural = 'Проценты вакансий по городам'
+
+class SkillsByYear(models.Model):
+    year = models.CharField('Год', max_length=4)
+    top_skills = models.TextField('Навыки')
+
+    def __str__(self):
+        return str(self.year)
+
+    class Meta:
+        verbose_name = 'Топ10 вакансий по году'
+        verbose_name_plural = 'Топ10 вакансий по годам'

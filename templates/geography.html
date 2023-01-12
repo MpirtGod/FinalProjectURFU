@@ -11,41 +11,62 @@
     <header class="header-bar">
         <h1>Backend-программист</h1>
     </header>
-    <main>
-        <nav class="sidebar">
-            <ul>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
-                        <a href=".."><span>Главная</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
-                        <a href="../demand"><span>Востребованность</span></a></div>
-                </li>
-                <li class="var_nav active">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
-                        <a href=""><span>География</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
-                        <a href="../skills"><span>Навыки</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
-                        <a href="../lastvacancies"><span>Последние вакансии</span></a></div>
-                </li>
-            </ul>
-        </nav>
+    <nav class="sidebar">
+        <ul>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
+                    <a href=".."><span>Главная</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
+                    <a href="../demand"><span>Востребованность</span></a></div>
+            </li>
+            <li class="var_nav active">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
+                    <a href=""><span>География</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
+                    <a href="../skills"><span>Навыки</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
+                    <a href="../lastvacancies"><span>Последние вакансии</span></a></div>
+            </li>
+        </ul>
+    </nav>
+    <main class="geography_main">
+        <table class="lefttable">
+            <caption class="tabletitle">Уровень зарплат по городам</caption>
+            <thread><th class="year">Город</th><th>Уровень зарплат</th></thread>
+        {% for profession in salbycity %}
+            <tr>
+                <td class="year">{{ profession.sity }}</td>
+                <td>{{ profession.salary }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img src="{% static 'img/statistic/transparentgraph2.png'%}" alt="Статистика" class="statistic_salary">
+        <table class="righttable">
+            <caption class="tabletitle">Уровень зарплат по городам</caption>
+            <thread><th class="year">Город</th><th>Доля вакансий</th></thread>
+        {% for profession in perbycity %}
+            <tr>
+                <td class="year">{{ profession.sity }}</td>
+                <td>{{ profession.percentage }}</td>
+            </tr>
+        {% endfor %}
+        </table>
     </main>
     <footer>
         <p>Мельников Александр Валерьевич РИ-210944</p>

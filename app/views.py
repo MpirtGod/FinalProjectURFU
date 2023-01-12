@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.models import Profession_statistic
+from app.models import Profession_statistic, SalaryByCity, PercentageByCity, SkillsByYear
 from django.views.generic.list import ListView
 
 
@@ -8,15 +8,18 @@ def index(request):
     return render(request, 'index.html')
 
 def demand(request):
-    query_results = Profession_statistic.objects.all()
-    return render(request, 'demand.html', {'query_results': query_results})
+    prof_stat = Profession_statistic.objects.all()
+    return render(request, 'demand.html', {'prof_stat': prof_stat})
 
 
 def geography(request):
-    return render(request, 'geography.html')
+    salbycity = SalaryByCity.objects.all()
+    perbycity = PercentageByCity.objects.all()
+    return render(request, 'geography.html', {'salbycity': salbycity, 'perbycity': perbycity})
 
 def skills(request):
-    return render(request, 'skills.html')
+    skillsbyyear = SkillsByYear.objects.all()
+    return render(request, 'skills.html', {'skillsbyyear': skillsbyyear})
 
 def lastvacancies(request):
     return render(request, 'lastvacancies.html')
