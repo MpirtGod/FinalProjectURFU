@@ -45,27 +45,15 @@
             </li>
         </ul>
     </nav>
-    <main>
-{#        <table class="skills_table">#}
-{#            <caption class="tabletitle">Топ-10 навыков для каждого года</caption>#}
-{#            <thread><th class="year">Город</th><th>Уровень зарплат</th></thread>#}
-{#        {% for year in skillsbyyear %}#}
-{#            <tr>#}
-{#                <td class="year">{{ year.year }}</td>#}
-{#                <td>{{ year.top_skills }}</td>#}
-{#            </tr>#}
-{#        {% endfor %}#}
-{#        </table>#}
+    <main class="lastvac_main">
         <script src="{% static "js/XMLHttpRequest.js" %}"></script>
         <table id="lastvac_table">
-            <caption class="tabletitle">Последние вакансии с hh.ru</caption>#}
-            <thread><th class="year">Название вакансии</th><th>Компания</th><th>Верхняя вилка оклада</th><th>Нижняя вилка оклада</th><th>Валюта оклада</th><th>Название региона</th><th>Дата публикации вакансии</th></thread>#}
+            <caption class="tabletitle">Последние вакансии с hh.ru</caption>
+            <thread><th class="year">Название вакансии</th><th>Компания</th><th>Оклад</th><th>Название региона</th><th>Дата публикации вакансии</th></thread>
         </table>
-
     </main>
     <footer>
         <p>Мельников Александр Валерьевич РИ-210944</p>
     </footer>
-
 </body>
 </html>

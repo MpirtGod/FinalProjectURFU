@@ -18,7 +18,7 @@ const sendRequest = (method, url) => {
     return promise;
 }
 
-function createVacancy (id, name, employer_name, salary_from, salary_to, salary_currency, area_name, published_at) {
+function createVacancy (id, name, employer_name, salary, area_name, published_at) {
 
     let newVacancy = document.createElement('tr');
     newVacancy.className = 'vac-item';
@@ -33,17 +33,9 @@ function createVacancy (id, name, employer_name, salary_from, salary_to, salary_
     vacancyEmployer_name.className = 'vac-employer_name';
     vacancyEmployer_name.innerHTML = employer_name;
 
-    let vacancySalary_from = document.createElement('td');
-    vacancySalary_from.className = 'vac-salary_from';
-    vacancySalary_from.innerHTML = salary_from;
-
-    let vacancySalary_to = document.createElement('td');
-    vacancySalary_to.className = 'vac-salary_to';
-    vacancySalary_to.innerHTML = salary_to;
-
-    let vacancySalary_currency = document.createElement('td');
-    vacancySalary_currency.className = 'vac-salary_currency';
-    vacancySalary_currency.innerHTML = salary_currency;
+    let vacancySalary = document.createElement('td');
+    vacancySalary.className = 'vac-salary';
+    vacancySalary.innerHTML = salary;
 
     let vacancyArea_name = document.createElement('td');
     vacancyArea_name.className = 'vac-area_name';
@@ -55,9 +47,7 @@ function createVacancy (id, name, employer_name, salary_from, salary_to, salary_
 
     newVacancy.appendChild(vacancyName);
     newVacancy.appendChild(vacancyEmployer_name);
-    newVacancy.appendChild(vacancySalary_from);
-    newVacancy.appendChild(vacancySalary_to);
-    newVacancy.appendChild(vacancySalary_currency);
+    newVacancy.appendChild(vacancySalary);
     newVacancy.appendChild(vacancyArea_name);
     newVacancy.appendChild(vacancyPublished_at);
 
@@ -65,9 +55,9 @@ function createVacancy (id, name, employer_name, salary_from, salary_to, salary_
 }
 
 
-sendRequest('GET', 'https://api.hh.ru/vacancies?text=backend&search_field=name&period=2&order_by=publication_time').then(data => {
+sendRequest('GET', 'https://api.hh.ru/vacancies?text=backend&only_with_salary=true&search_field=name&period=1&order_by=publication_time').then(data => {
     for (let i = 0; i < 10; i++) {
         let item = data.items[i];
-        createVacancy(item.id, item.name, item.employer.name, item.salary.from, item.salary.to, item.salary.currency, item.area.name, item.published_at);
+        createVacancy(item.id, item.name, item.employer.name, `${item.salary.from} - ${item.salary.to} (${item.salary.currency})`.replace('null -', '').replace('- null', ''), item.area.name, item.published_at);
     }
 })

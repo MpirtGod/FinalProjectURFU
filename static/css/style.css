@@ -262,11 +262,55 @@ caption {
 }
 
 .skills_table {
-    left: 280px;
-    height: 500px;
-    width: 1000px;
+    left: 80px;
+    width: 940px;
 }
 
 .skills_main {
+    height: 4000px;
+}
+
+.year2015{
+  top: 50px;
+}
+.year2016{
+  top: 540px;
+}
+.year2017{
+  top: 1030px;
+}
+.year2018{
+  top: 1520px;
+}
+.year2019{
+  top: 2010px;
+}
+.year2020{
+  top: 2500px;
+}
+.year2021{
+  top: 2990px;
+}
+.year2022{
+  top: 3480px;
+}
+.pic {
+  position: absolute;
+  margin-top: 63px;
+  height: 300px;
+  left: 1020px;
+  border: 3px solid #2279af;
+}
+img {
+	filter: hue-rotate(-40deg);
+}
+.logo_img {
+    position: absolute;
+    width: 130px;
+    left: 29px;
+    top: 9px;
+}
+
+.lastvac_main {
     height: 90%;
 }
