@@ -11,44 +11,61 @@
     <header class="header-bar">
         <h1>Backend-программист</h1>
     </header>
+    <nav class="sidebar">
+        <ul>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
+                    <a href=".."><span>Главная</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
+                    <a href="../demand"><span>Востребованность</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
+                    <a href="../geography"><span>География</span></a></div>
+            </li>
+            <li class="var_nav">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
+                    <a href="../skills"><span>Навыки</span></a></div>
+            </li>
+            <li class="var_nav active">
+                <div class="link_bg"></div>
+                <div class="link_title">
+                    <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
+                    <a href=""><span>Последние вакансии</span></a></div>
+            </li>
+        </ul>
+    </nav>
     <main>
-        <nav class="sidebar">
-            <ul>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/home.png'%}" alt="Главная"></div>
-                        <a href=".."><span>Главная</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/demand.png'%}" alt="Востребованность"></div>
-                        <a href="../demand"><span>Востребованность</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/geography.png'%}" alt="География"></div>
-                        <a href="../geography"><span>География</span></a></div>
-                </li>
-                <li class="var_nav">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/skills.png'%}" alt="Навыки"></div>
-                        <a href="../skills"><span>Навыки</span></a></div>
-                </li>
-                <li class="var_nav active">
-                    <div class="link_bg"></div>
-                    <div class="link_title">
-                        <div class="icon"><img src="{% static 'img/icons/lastvacancies.png'%}" alt="Последние вакансии"></div>
-                        <a href=""><span>Последние вакансии</span></a></div>
-                </li>
-            </ul>
-        </nav>
+{#        <table class="skills_table">#}
+{#            <caption class="tabletitle">Топ-10 навыков для каждого года</caption>#}
+{#            <thread><th class="year">Город</th><th>Уровень зарплат</th></thread>#}
+{#        {% for year in skillsbyyear %}#}
+{#            <tr>#}
+{#                <td class="year">{{ year.year }}</td>#}
+{#                <td>{{ year.top_skills }}</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </table>#}
+        <script src="{% static "js/XMLHttpRequest.js" %}"></script>
+        <table id="lastvac_table">
+            <caption class="tabletitle">Последние вакансии с hh.ru</caption>#}
+            <thread><th class="year">Название вакансии</th><th>Компания</th><th>Верхняя вилка оклада</th><th>Нижняя вилка оклада</th><th>Валюта оклада</th><th>Название региона</th><th>Дата публикации вакансии</th></thread>#}
+        </table>
+
     </main>
     <footer>
         <p>Мельников Александр Валерьевич РИ-210944</p>
     </footer>
+
 </body>
 </html>

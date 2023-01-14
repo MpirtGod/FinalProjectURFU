@@ -1,12 +1,17 @@
 html {
-  background-image: url('../img/bg/bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-image: url('../img/bg/bg.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body{
+    font-family: "Roboto Light";
 }
 
 ul {
@@ -81,7 +86,7 @@ li div a {
     display: block;
     position: absolute;
     float: left;
-    font-family: Arial;
+
     color: black;
     text-decoration: none;
     width: 100%;
@@ -109,8 +114,8 @@ a span {
   background-color: #207a66;
   height: 100%;
   overflow: auto;
-    left: 0;
-    top:80px;
+  left: 0;
+  top:80px;
 }
 
 
@@ -132,13 +137,14 @@ a span {
 }
 
 .header-bar {
-    background-color: rgba(99, 188, 169, 0.33);
+    background-color: #207a66;
     color: #A4DED1;
     height: 80px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top:0;
     left: 0;
+    z-index: 2;
 
 }
 
@@ -149,11 +155,20 @@ header h1 {
 .profession-text {
     display: block;
     position: relative;
-    left: 270px;
-    top: 80px;
-    width: 80%;
-    font-family: Verdana;
+    font-size: 20px;
     color: white;
+}
+
+main {
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    right: 0;
+    /*padding-bottom: 200px;*/
+    height: 115%;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.39);
 }
 
 footer {
@@ -163,10 +178,95 @@ footer {
     color: #fff;
     width: 100%;
     height: 40px;
+    z-index: 2;
 }
 
 footer p {
     font-size: 15px;
     padding-left: 20px;
     text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 60px;
+}
+
+table {
+    display: table;
+    position: absolute;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 7px solid #207a66;
+    border-bottom: 7px solid #207a66;
+    top: 40px;
+}
+
+th {
+    font-size: 13px;
+    font-weight: normal;
+    background: rgb(99, 188, 169);
+    border-right: 1px solid #207a66;
+    border-left: 1px solid #207a66;
+    border-bottom: 3px solid #207a66;
+    color: #090f69;
+    padding: 8px;
+}
+
+td {
+    background: rgb(99, 188, 169);
+    border-right: 1px solid #207a66;
+    border-left: 1px solid #207a66;
+    color: black;
+    padding: 8px;
+}
+
+tr:hover td{
+    background: #207a66;
+}
+
+.year {
+    background: #208270;
+}
+
+.statistic_salary {
+    position: fixed;
+    right: 5%;
+    top: 13%;
+    background: white;
+    width: 22%;
+    height: auto;
+}
+
+.lefttable {
+    left: 100px;
+    width: 300px;
+    height: 500px;
+}
+
+.righttable {
+    left: 570px;
+    width: 300px;
+    height: 500px;
+}
+
+.geography_main {
+    height: 90%;
+}
+
+caption {
+    color: white;
+    font-size: 30px;
+}
+
+.skills_table {
+    left: 280px;
+    height: 500px;
+    width: 1000px;
+}
+
+.skills_main {
+    height: 90%;
 }
