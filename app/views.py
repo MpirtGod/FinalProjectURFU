@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from app.models import Profession_statistic, SalaryByCity, PercentageByCity, SkillsByYear
+from app.models import Profession_statistic, SalaryByCity, PercentageByCity, TopSkills2015, TopSkills2016, TopSkills2017, TopSkills2018, \
+    TopSkills2019, TopSkills2020, TopSkills2021, TopSkills2022
 from django.views.generic.list import ListView
 
 
@@ -18,8 +19,25 @@ def geography(request):
     return render(request, 'geography.html', {'salbycity': salbycity, 'perbycity': perbycity})
 
 def skills(request):
-    skillsbyyear = SkillsByYear.objects.all()
-    return render(request, 'skills.html', {'skillsbyyear': skillsbyyear})
+    skills2015 = TopSkills2015.objects.all()
+    skills2016 = TopSkills2016.objects.all()
+    skills2017 = TopSkills2017.objects.all()
+    skills2018 = TopSkills2018.objects.all()
+    skills2019 = TopSkills2019.objects.all()
+    skills2020 = TopSkills2020.objects.all()
+    skills2021 = TopSkills2021.objects.all()
+    skills2022 = TopSkills2022.objects.all()
+    response_data = {
+        "skills2015": skills2015,
+        "skills2016": skills2016,
+        "skills2017": skills2017,
+        "skills2018": skills2018,
+        "skills2019": skills2019,
+        "skills2020": skills2020,
+        "skills2021": skills2021,
+        "skills2022": skills2022,
+    }
+    return render(request, "skills.html", response_data)
 
 def lastvacancies(request):
     return render(request, 'lastvacancies.html')

@@ -40,13 +40,97 @@ class PercentageByCity(models.Model):
         verbose_name = 'Процент вакансий по городам'
         verbose_name_plural = 'Проценты вакансий по городам'
 
-class SkillsByYear(models.Model):
-    year = models.CharField('Год', max_length=4)
-    top_skills = models.TextField('Навыки')
+class TopSkills2015(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
 
-    def __str__(self):
-        return str(self.year)
+    def str(self):
+        return str(self.skill)
 
     class Meta:
-        verbose_name = 'Топ10 вакансий по году'
-        verbose_name_plural = 'Топ10 вакансий по годам'
+        verbose_name = 'Топ-10 навыков за 2015 год'
+        verbose_name_plural = 'Топ-10 навыков за 2015 год'
+
+
+class TopSkills2016(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2016 год'
+        verbose_name_plural = 'Топ-10 навыков за 2016 год'
+
+
+class TopSkills2017(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2017 год'
+        verbose_name_plural = 'Топ-10 навыков за 2017 год'
+
+
+class TopSkills2018(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2018 год'
+        verbose_name_plural = 'Топ-10 навыков за 2018 год'
+
+
+class TopSkills2019(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2019 год'
+        verbose_name_plural = 'Топ-10 навыков за 2019 год'
+
+
+class TopSkills2020(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2020 год'
+        verbose_name_plural = 'Топ-10 навыков за 2020 год'
+
+
+class TopSkills2021(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2021 год'
+        verbose_name_plural = 'Топ-10 навыков за 2021 год'
+
+
+class TopSkills2022(models.Model):
+    skill = models.CharField('Навык', max_length=30)
+    count = models.CharField('Количество', max_length=150)
+
+    def str(self):
+        return str(self.skill)
+
+    class Meta:
+        verbose_name = 'Топ-10 навыков за 2022 год'
+        verbose_name_plural = 'Топ-10 навыков за 2022 год'

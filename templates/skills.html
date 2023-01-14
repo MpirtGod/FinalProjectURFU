@@ -45,17 +45,95 @@
             </li>
         </ul>
     </nav>
-    <main>
+    <main class="skills_main">
         <table class="skills_table">
-            <caption class="tabletitle">Топ-10 навыков для каждого года</caption>
-            <thread><th class="year">Город</th><th>Уровень зарплат</th></thread>
-        {% for year in skillsbyyear %}
+            <caption class="tabletitle">Топ-10 навыков 2015 года</caption>
+            <thread><th class="year">Навык</th><th>Количество</th></thread>
+        {% for i in skills2015 %}
             <tr>
-                <td class="year">{{ year.year }}</td>
-                <td>{{ year.top_skills }}</td>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
             </tr>
         {% endfor %}
         </table>
+        <img class = "pic year2015" src="{% static "img/graphs/graph2015.png" %}" alt="график навыков" >
+        <table class="year2016" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2016 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2016 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2016" src="{% static "img/graphs/graph2016.png" %}" alt="график навыков" >
+        <table class="year2017" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2017 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2017 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2017" src="{% static "img/graphs/graph2017.png" %}" alt="график навыков" >
+        <table class="year2018" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2018 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2018 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2018" src="{% static "img/graphs/graph2018.png" %}" alt="график навыков" >
+        <table class="year2019" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2019 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2019 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2019" src="{% static "img/graphs/graph2019.png" %}" alt="график навыков" >
+        <table class="year2020" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2020 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2020 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2020" src="{% static "img/graphs/graph2020.png" %}" alt="график навыков" >
+        <table class="year2021" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2021 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2021 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2021" src="{% static "img/graphs/graph2021.png" %}" alt="график навыков" >
+        <table class="year2022" border="2" cellpadding="2.5px" align="left">
+        <caption>Топ-10 навыков 2022 года</caption>
+        <thead><th>Навык</th><th>Количество</th></thead>
+        {% for i in skills2022 %}
+            <tr>
+                <td>{{ i.skill }}</td>
+                <td>{{ i.count }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        <img class = "pic year2022" src="{% static "img/graphs/graph2022.png" %}" alt="график навыков" >
     </main>
     <footer>
         <p>Мельников Александр Валерьевич РИ-210944</p>
