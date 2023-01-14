@@ -55,9 +55,9 @@ function createVacancy (id, name, employer_name, salary, area_name, published_at
 }
 
 
-sendRequest('GET', 'https://api.hh.ru/vacancies?text=backend&only_with_salary=true&search_field=name&period=1&order_by=publication_time').then(data => {
+sendRequest('GET', 'https://api.hh.ru/vacancies?text=backend&only_with_salary=true&search_field=name&period=2&order_by=publication_time').then(data => {
     for (let i = 0; i < 10; i++) {
         let item = data.items[i];
-        createVacancy(item.id, item.name, item.employer.name, `${item.salary.from} - ${item.salary.to} (${item.salary.currency})`.replace('null -', '').replace('- null', ''), item.area.name, item.published_at);
+        createVacancy(item.id, item.name.slice(0 ,100), item.employer.name, `${item.salary.from} - ${item.salary.to} (${item.salary.currency})`.replace('null -', '').replace('- null', ''), item.area.name, item.published_at);
     }
 })

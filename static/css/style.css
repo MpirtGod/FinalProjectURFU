@@ -22,6 +22,14 @@ ul {
     backface-visibility: hidden;
 }
 
+.logo {
+    filter: none;
+    height: 70px;
+    width: auto;
+    padding-left: 43px;
+    padding-top: 5px;
+}
+
 .var_nav {
     position: relative;
     width: 250px;
@@ -86,7 +94,6 @@ li div a {
     display: block;
     position: absolute;
     float: left;
-
     color: black;
     text-decoration: none;
     width: 100%;
@@ -109,7 +116,7 @@ a span {
 }
 
 .sidebar {
-  width: 250px;
+  width: 270px;
   position: fixed;
   background-color: #207a66;
   height: 100%;
@@ -152,11 +159,40 @@ header h1 {
     padding-left: 25px;
 }
 
-.profession-text {
+main div p,ul {
     display: block;
     position: relative;
     font-size: 20px;
     color: white;
+    width: 60%;
+}
+
+main div ul li {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.maintable {
+    top:auto;
+    width: 60%;
+}
+
+.main_page {
+    height: 210%;
+}
+
+.prof_pic {
+    position: absolute;
+    right: 20px;
+    width: 35%;
+    height: auto;
+    top: 20px;
+    filter: hue-rotate(-60deg);
+}
+
+.joke {
+    top: 950px;
+    width: 25%;
 }
 
 main {
@@ -190,6 +226,11 @@ footer p {
 h2 {
     color: white;
     font-size: 60px;
+}
+
+h3 {
+    color: white;
+    font-size: 25px;
 }
 
 table {
@@ -313,4 +354,8 @@ img {
 
 .lastvac_main {
     height: 90%;
+}
+
+#lastvac_table {
+    left: 140px;
 }
